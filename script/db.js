@@ -15,21 +15,3 @@ function localPgConfig() {
 	return config;
 }
 module.exports.localPgConfig = localPgConfig;
-
-function getEnvironmentPgConfig(environment) {
-	var env = process.env;
-	environment_params = url.parse(environment);
-	var environment_auth = environment_params.auth.split(':');
-	
-	var config = {
-		user: environment_auth[0],
-		password: environment_auth[1],
-		host: environment_params.hostname,
-		port: environment_params.port,
-		database: environment_params.pathname.split('/')[1],
-		ssl: {rejectUnauthorized: false} // I WILL NEED TO FIX THIS!
-	};
-  
-	return config;
-}
-module.exports.getEnvironmentPgConfig = getEnvironmentPgConfig;
