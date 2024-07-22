@@ -11,7 +11,7 @@ module.exports = function(app) {
 		res.send(indexPage);
 	});
 
-	app.get('*', (req, res) => {
+	app.get('*', urlencodedParser, function(req, res) {
 		res.send(indexPage);
 	});
 }
