@@ -10,4 +10,8 @@ module.exports = function(app) {
 	app.get('/', urlencodedParser, function(req, res) {
 		res.send(indexPage);
 	});
+
+	app.get('*', (req, res) => {
+		res.redirect('/')
+	});
 }
