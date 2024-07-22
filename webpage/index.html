@@ -25,6 +25,15 @@
             background-size: 100% 100%;
             background-repeat: repeat-x;
         }
+
+        .centerimage {
+            min-height: 1080px;
+            background: url("/images/center_image.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
     </style>
 </head>
 <html>
@@ -33,10 +42,12 @@
         <table border="0" width="100%">
             <td style="text-align: left; text-align: left; vertical-align: middle; height: 70px; padding-left: 30px"><button type="button" style="color:#ffffff;background-color:#000000" class="btn btn-em">Manage My Cafe</button></td>
             <td style="text-align: right; vertical-align: middle; height: 70px; padding-right: 30px">
-                <button type="button" class="btn btn-danger" onclick="alert('register time');">Register</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="button" class="btn btn-success" onclick="window.location.href='https://login.managemycafe.com/';">Success</button>
+                <button type="button" class="btn btn-danger" onclick="window.location.href='https://register.managemycafe.com/register';">Register</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-success" onclick="window.location.href='https://login.managemycafe.com/';">Login</button>
             </td>
         </table>
+    </div>
+    <div class="centerimage">
     </div>
 </body>
 <script>
