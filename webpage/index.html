@@ -11,6 +11,35 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="javascript/common.js"></script>
     <script>
+
+    function sendRegister() {
+        var to = 'manage';
+        to += 'mycafe@out';
+        to += 'look.com';
+
+        var subject = 'Register My Cafe';
+        var body = 'Please fill the following:\n\n';
+        body += 'Shop name: \n';
+        body += 'Shop phone number: \n';
+        body += 'Owner names: \n';
+        body += 'Manager names: \n';
+
+        var args = [];
+
+        args.push('subject=' + encodeURIComponent(subject));
+        args.push('body=' + encodeURIComponent(body))
+
+        var url = 'mai';
+        url += 'lto';
+        url += ':' + encodeURIComponent(to);
+
+        if (args.length > 0) {
+            url += '?' + args.join('&');
+        }
+
+        return url;
+    }
+
     </script>
     <style>
         body {
@@ -41,8 +70,8 @@
         <table border="0" width="100%">
             <td style="text-align: left; text-align: left; vertical-align: middle; height: 70px; padding-left: 25px"><button type="button" style="color:#ffffff;background-color:#000000" class="btn btn-em">Manage My Cafe</button></td>
             <td style="text-align: right; vertical-align: middle; height: 70px; padding-right: 25px">
-                <button type="button" class="btn btn-danger" onclick="window.location.href='https://register.managemycafe.com/register';">Register</button> &nbsp;&nbsp;&nbsp;
-                <button type="button" class="btn btn-success" onclick="window.location.href='https://login.managemycafe.com/';">Login</button>
+                <button type="button" class="btn btn-danger" onclick="window.location.href = sendRegister();">Register</button> &nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-success" onclick="window.location.href = 'https://login.managemycafe.com/';">Login</button>
             </td>
         </table>
     </div>
