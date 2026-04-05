@@ -49,7 +49,7 @@
     </script>
     <style>
         body {
-          background-colorx: #EFEEE7;
+          background-color: #EFEEE7;
           background-color: #ac9175;
           color: #1f1f1f !important;
           font-family: 'Playfair Display';
@@ -58,6 +58,10 @@
         a {
             color: #1f1f1f !important;
         }
+
+    .bold {
+        font-weight:bold;
+    }
 
         .center {
             margin: 0;
@@ -72,27 +76,99 @@
 <html>
 <body>
     <table border="0" width="100%">
-        <td style="text-align: right; vertical-align: middle; padding-top: 20px; padding-right: 25px">
-            <a id="register">Register</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-            <a href="https://login.managemycafe.com">Login</a>  &nbsp;
-        </td>
+        <tr>
+            <td style="text-align: right; vertical-align: middle; padding-top: 20px; padding-right: 25px">
+                <a id="register">Register</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="https://login.managemycafe.com">Login</a>  &nbsp;
+            </td>
+        </tr>
     </table>
-    <hr style="width:100%" />
-    <div class="center">
-        <h1 style="font-size: 100px;">Manage My Cafe</h1>
-        <hr style="width:100%;height:3px;color:#1f1f1f;background-color:#1f1f1f" />
-        Manage your cafe today!
-    </div>      
+    <table border="0" width="800px" align="center" >
+        <tr>
+            <td>
+                <hr style="width: 10px" />
+                <div>
+                    <h1 style="font-size: 100px;">Manage My Cafe</h1>
+                    <hr style="width:100%;height:3px;color:#1f1f1f;background-color:#1f1f1f" />
+                    Manage your cafe today!
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <table border="0" width="100%">
+                        <tr>
+                            <td class="bold">
+                                Track staff work times front and center with a device/tablet
+                                at FOH.  The FOH device can track daily tasks and any recurring tasks
+                                that need to be done thoughout the day and months of the year
+                            </td>
+                            <td><img src="/images/tablet.png"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="bold">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Roster your staff, understand the daily and weekly hours and outline jobs and roles.<br/>
+                                Easily organise 20 individual staff and their roles
+                                <img src="/images/roster2.png">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="bold">
+                                Give your staff access to see their roster real time, request any time off or sick leave,
+                                and any resources they need about the cafe via the Help screen.<br/>
+                                Give your managers and supervisors extra access to a full Roster, let them know who has signed in and what time,
+                                and give them a list of Employee contacts via phone or group message
+                            </td>
+                            <td>
+                                <img src="/images/employee.png">
+                                <img src="/images/manager.png">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/images/admin.png">
+                            </td>
+                            <td class="bold">
+                                Organise all of the following at the BOH, or remotely via a Web Browser
+                                <ul>
+                                    <li>Daily Tasks</li>
+                                    <li>Recurring Tasks</li>
+                                    <li>Help topics</li>
+                                    <li>Employee roles</li>
+                                    <li>Add/Editing/Removing Employees</li>
+                                    <li>Manually change employee times</li>
+                                    <li>A weekly timesheet of all hours worked</li>
+                                    <li>Roster</li>
+                                    <li>Approve time off and sick leave</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+            </td>
+        </tr>
+    </table>      
 </body>
 <script>
-    /*
-        Why use Manage My Cafe ?
-
-    Track staff work times
-    Set and track daily tasks and any recurring tasks in the cafe
-    Roster staff and understand the resources allocated over time
-    Understand and coordinate staff unavailability
-    */
     sendRegister();
 </script>
 </html>
