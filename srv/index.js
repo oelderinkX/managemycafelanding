@@ -1,17 +1,26 @@
-var bodyParser = require('body-parser');
-var fs = require("fs");
+const bodyParser = require('body-parser');
+const fs = require("fs");
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
-var jsonParser = bodyParser.json();
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
+const jsonParser = bodyParser.json();
 
-var indexPage = fs.readFileSync(__dirname + "/../webpage/index.html", "utf8");
+const indexPage = fs.readFileSync(__dirname + "/../webpage/index.html", "utf8");
+const mobileIndexPage = fs.readFileSync(__dirname + "/../webpage/mobile_index.html", "utf8");
 
 module.exports = function(app) {
 	app.get('/', urlencodedParser, function(req, res) {
-		res.send(indexPage);
+		if (req.useragent.isMobile) {
+        	res.send(mobileIndexPage);
+    	} else {
+			res.send(indexPage);
+		}
 	});
 
 	app.get('*', urlencodedParser, function(req, res) {
-		res.send(indexPage);
+		if (req.useragent.isMobile) {
+        	res.send(mobileIndexPage);
+    	} else {
+			res.send(indexPage);
+		}
 	});
 }

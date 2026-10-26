@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Manage My Cafe</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/branding.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<html>
+<body>
+    <span style="float: top;">
+        <button type="button" style="margin:15px;color:#ffffff;background-color:#000000" class="btn btn-em" onclick="window.location.href='https://login.managemycafe.com';">Login</button>
+    </span>
+
+    <div class="container">
+        <h3>Manage your cafe today!</h3>
+        <br/>
+        Track staff work times front and center with a device/tablet
+        at FOH.  The FOH device can track daily tasks and any recurring tasks
+        that need to be done thoughout the day and months of the year
+        <br/>
+        <img style="max-width: 100%;" src="/images/tablet.png">
+        <br/>
+        <br/>
+        Roster your staff, understand the daily and weekly hours and outline jobs and roles.<br/>
+        Easily organise 20 individual staff and their roles
+        <br/>
+        <img style="max-width: 100%;" src="/images/roster2.png">
+        <br/>
+        <br/>
+        Give your staff access to see their roster real time, request any time off or sick leave,
+        and any resources they need about the cafe via the Help screen.<br/>
+        Give your managers and supervisors extra access to a full Roster, let them know who has signed in and what time,
+        and give them a list of Employee contacts via phone or group message
+        <br/>
+        <img style="max-width: 100%;" src="/images/employee.png">
+        <img style="max-width: 100%;" src="/images/manager.png">
+        <br/>
+        <br/>
+        Organise all of the following at the BOH, or remotely via a Web Browser
+        <ul>
+            <li>Daily Tasks</li>
+            <li>Recurring Tasks</li>
+            <li>Help topics</li>
+            <li>Employee roles</li>
+            <li>Add/Editing/Removing Employees</li>
+            <li>Manually change employee times</li>
+            <li>A weekly timesheet of all hours worked</li>
+            <li>Roster</li>
+            <li>Approve time off and sick leave</li>
+        </ul>
+        <img style="max-width: 100%;" src="/images/admin.png">
+        <br/>
+        <br/>
+        <br/>
+        <a id="register">Contact us</a>
+        <br/>
+        <br/>
+    </div>
+</body>
+<script>
+    const register = document.getElementById("register");
+
+    let to = 'manage';
+    to += 'mycafe@out';
+    to += 'look.com';
+
+    const subject = 'Register My Cafe';
+    let body = 'Please fill the following,\n\n';
+    body += 'Shop name: \n';
+    body += 'Shop phone number: \n';
+    body += 'Owner names: \n';
+    body += 'Manager names: \n\n';
+    body += 'Thanks, Manage My Cafe';
+
+    const args = [];
+
+    args.push('subject=' + encodeURIComponent(subject));
+    args.push('body=' + encodeURIComponent(body))
+
+    let url = 'mai';
+    url += 'lto';
+    url += ':' + encodeURIComponent(to);
+
+    if (args.length > 0) {
+        url += '?' + args.join('&');
+    }
+
+    register.setAttribute('href', url);
+</script>
+</html>
